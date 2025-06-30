@@ -122,7 +122,7 @@ In yellow the nodes that have not been completely mapped to the library yet, as 
 The project structure must follow the next structure:
 
 ```bash
-MD4DSP-m2python/
+knime2model_MD4DSP/
 │
 ├── doc_images/
 │  └── ...
