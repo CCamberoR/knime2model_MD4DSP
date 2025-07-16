@@ -21,25 +21,16 @@ def generateWorkflow():
 	list_invalid=['China']
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, 
-														missing_invalid_list=list_invalid, common_missing_invalid_list=common_invalid_list, field='Country')
+														missing_invalid_list=list_invalid, common_missing_invalid_list=common_invalid_list, field='Country', origin_function="Row Filter")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_types_as_string(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_suspect_precision(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_suspect_distribution(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, min_value=9.0, max_value=202.0, field='Country')
-	
-	data_smells.check_date_as_datetime(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_separating_consistency(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, decimal_sep='.',  field='Country')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', origin_function="Row Filter")
+	data_smells.check_types_as_string(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', expected_type=DataType.STRING, origin_function="Row Filter")
+	data_smells.check_special_character_spacing(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', origin_function="Row Filter")
+	data_smells.check_suspect_precision(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', origin_function="Row Filter")
+	data_smells.check_date_as_datetime(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', origin_function="Row Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, field='Country', origin_function="Row Filter")
+	data_smells.check_suspect_distribution(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, min_value=9.0, max_value=202.0, field='Country', origin_function="Row Filter")
+	data_smells.check_separating_consistency(data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, decimal_sep='.',  field='Country', origin_function="Row Filter")
 	
 	if contract_pre_post.check_fix_value_range(value='China', is_substring=False, data_dictionary=rowFilterPrimitive_Country__input_dataDictionary_df, belong_op=Belong(0), field='Country',
 									quant_abs=None, quant_rel=None, quant_op=None, origin_function="Row Filter"):

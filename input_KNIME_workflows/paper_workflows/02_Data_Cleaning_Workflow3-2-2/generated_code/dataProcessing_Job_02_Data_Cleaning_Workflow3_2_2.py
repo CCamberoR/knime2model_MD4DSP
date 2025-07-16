@@ -21,36 +21,27 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=join_Name_with_City__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Name')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Name', origin_function="String Manipulation")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=join_Name_with_City__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='City')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='City', origin_function="String Manipulation")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name')
-	data_smells.check_integer_as_floating_point(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City')
-	
-	data_smells.check_types_as_string(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name')
-	data_smells.check_special_character_spacing(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City')
-	
-	data_smells.check_suspect_precision(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name')
-	data_smells.check_suspect_precision(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name')
-	data_smells.check_date_as_datetime(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City')
-	
-	data_smells.check_separating_consistency(data_dictionary=join_Name_with_City__input_dataDictionary_df, decimal_sep='.',  field='Name')
-	data_smells.check_separating_consistency(data_dictionary=join_Name_with_City__input_dataDictionary_df, decimal_sep='.',  field='City')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', origin_function="String Manipulation")
+	data_smells.check_types_as_string(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', expected_type=DataType.STRING, origin_function="String Manipulation")
+	data_smells.check_special_character_spacing(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', origin_function="String Manipulation")
+	data_smells.check_suspect_precision(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', origin_function="String Manipulation")
+	data_smells.check_date_as_datetime(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', origin_function="String Manipulation")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='Name', origin_function="String Manipulation")
+	data_smells.check_separating_consistency(data_dictionary=join_Name_with_City__input_dataDictionary_df, decimal_sep='.',  field='Name', origin_function="String Manipulation")
+	data_smells.check_integer_as_floating_point(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', origin_function="String Manipulation")
+	data_smells.check_types_as_string(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', expected_type=DataType.STRING, origin_function="String Manipulation")
+	data_smells.check_special_character_spacing(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', origin_function="String Manipulation")
+	data_smells.check_suspect_precision(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', origin_function="String Manipulation")
+	data_smells.check_date_as_datetime(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', origin_function="String Manipulation")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=join_Name_with_City__input_dataDictionary_df, field='City', origin_function="String Manipulation")
+	data_smells.check_separating_consistency(data_dictionary=join_Name_with_City__input_dataDictionary_df, decimal_sep='.',  field='City', origin_function="String Manipulation")
 	
 	join_Name_with_City__input_dataDictionary_transformed=join_Name_with_City__input_dataDictionary_df.copy()
 	join_Name_with_City__input_dataDictionary_transformed=data_transformations.transform_derived_field(data_dictionary=join_Name_with_City__input_dataDictionary_transformed,

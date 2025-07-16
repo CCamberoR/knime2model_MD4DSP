@@ -21,35 +21,35 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Latitude')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Latitude', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Longitude')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Longitude', origin_function="Column Filter")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude')
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, decimal_sep='.',  field='Latitude', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, decimal_sep='.',  field='Longitude', origin_function="Column Filter")
 	
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude')
-	
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude')
-	
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, decimal_sep='.',  field='Latitude')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, decimal_sep='.',  field='Longitude')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Latitude')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df, field='Longitude')
+	field_list_columnFilter_PRE_field_range=['Latitude', 'Longitude']
+	if contract_pre_post.check_field_range(fields=field_list_columnFilter_PRE_field_range,
+								data_dictionary=columnFilter_Latitude_Longitude__input_dataDictionary_df,
+								belong_op=Belong(0), origin_function="Column Filter"):
+		print('PRECONDITION Column Filter(Latitude, Longitude) VALIDATED')
+	else:
+		print('PRECONDITION Column Filter(Latitude, Longitude) NOT VALIDATED')
 	
 	
 	columnFilter_Latitude_Longitude__input_dataDictionary_transformed=columnFilter_Latitude_Longitude__input_dataDictionary_df.copy()
@@ -60,6 +60,15 @@ def generateWorkflow():
 	columnFilter_Latitude_Longitude__output_dataDictionary_df=columnFilter_Latitude_Longitude__input_dataDictionary_transformed
 	columnFilter_Latitude_Longitude__output_dataDictionary_df.to_parquet('/wf_validation_python/data/output/columnFilter_output_dataDictionary.parquet')
 	columnFilter_Latitude_Longitude__output_dataDictionary_df=pd.read_parquet('/wf_validation_python/data/output/columnFilter_output_dataDictionary.parquet')
+	
+	field_list_columnFilter_POST_field_range=['Latitude', 'Longitude']
+	if contract_pre_post.check_field_range(fields=field_list_columnFilter_POST_field_range,
+								data_dictionary=columnFilter_Latitude_Longitude__output_dataDictionary_df,
+								belong_op=Belong(1), origin_function="Column Filter"):
+		print('POSTCONDITION Column Filter(Latitude, Longitude) VALIDATED')
+	else:
+		print('POSTCONDITION Column Filter(Latitude, Longitude) NOT VALIDATED')
+	
 	
 	columns_list_columnFilter_Latitude_Longitude__INV_condition = ['Latitude', 'Longitude']
 	

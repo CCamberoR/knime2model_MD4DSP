@@ -25,24 +25,15 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Tz database time zone')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Tz database time zone', origin_function="String Manipulation")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone')
-	
-	data_smells.check_types_as_string(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone')
-	
-	data_smells.check_suspect_precision(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone')
-	
-	data_smells.check_separating_consistency(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, decimal_sep='.',  field='Tz database time zone')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', origin_function="String Manipulation")
+	data_smells.check_types_as_string(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', expected_type=DataType.STRING, origin_function="String Manipulation")
+	data_smells.check_special_character_spacing(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', origin_function="String Manipulation")
+	data_smells.check_suspect_precision(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', origin_function="String Manipulation")
+	data_smells.check_date_as_datetime(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', origin_function="String Manipulation")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, field='Tz database time zone', origin_function="String Manipulation")
+	data_smells.check_separating_consistency(data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, decimal_sep='.',  field='Tz database time zone', origin_function="String Manipulation")
 	
 	if contract_pre_post.check_fix_value_range(value='/', is_substring=True, data_dictionary=mapping_Tz_database_time_zone__input_dataDictionary_df, belong_op=Belong(0), field='Tz database time zone',
 									quant_abs=None, quant_rel=None, quant_op=None, origin_function="String Manipulation"):

@@ -21,107 +21,107 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Airline ID')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Airline ID', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Name')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Name', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Alias')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Alias', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='IATA')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='IATA', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='ICAO')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='ICAO', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Callsign')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Callsign', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Country')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Country', origin_function="Column Filter")
 	list_missing=[]
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Active')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Active', origin_function="Column Filter")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country')
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active')
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Airline ID', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Name', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Alias', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='IATA', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='ICAO', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Callsign', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Country', origin_function="Column Filter")
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Active', origin_function="Column Filter")
 	
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country', expected_type=DataType.STRING)
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country')
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active')
-	
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country')
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country')
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active')
-	
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Airline ID')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Name')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Alias')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='IATA')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='ICAO')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Callsign')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Country')
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, decimal_sep='.',  field='Active')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Airline ID')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Name')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Alias')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='IATA')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='ICAO')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Callsign')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Country')
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df, field='Active')
+	field_list_columnFilter_PRE_field_range=['Airline ID', 'Name', 'Alias', 'IATA', 'ICAO', 'Callsign', 'Country', 'Active']
+	if contract_pre_post.check_field_range(fields=field_list_columnFilter_PRE_field_range,
+								data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df,
+								belong_op=Belong(0), origin_function="Column Filter"):
+		print('PRECONDITION Column Filter(Airline ID, Name, Alias, IATA, ICAO, Callsign, Country, Active) VALIDATED')
+	else:
+		print('PRECONDITION Column Filter(Airline ID, Name, Alias, IATA, ICAO, Callsign, Country, Active) NOT VALIDATED')
 	
 	
 	columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_transformed=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_df.copy()
@@ -132,6 +132,15 @@ def generateWorkflow():
 	columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__output_dataDictionary_df=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__input_dataDictionary_transformed
 	columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__output_dataDictionary_df.to_parquet('/wf_validation_python/data/output/columnFilter_output_dataDictionary.parquet')
 	columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__output_dataDictionary_df=pd.read_parquet('/wf_validation_python/data/output/columnFilter_output_dataDictionary.parquet')
+	
+	field_list_columnFilter_POST_field_range=['Airline ID', 'Name', 'Alias', 'IATA', 'ICAO', 'Callsign', 'Country', 'Active']
+	if contract_pre_post.check_field_range(fields=field_list_columnFilter_POST_field_range,
+								data_dictionary=columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__output_dataDictionary_df,
+								belong_op=Belong(0), origin_function="Column Filter"):
+		print('POSTCONDITION Column Filter(Airline ID, Name, Alias, IATA, ICAO, Callsign, Country, Active) VALIDATED')
+	else:
+		print('POSTCONDITION Column Filter(Airline ID, Name, Alias, IATA, ICAO, Callsign, Country, Active) NOT VALIDATED')
+	
 	
 	columns_list_columnFilter_Airline_ID_Name_Alias_IATA_ICAO_Callsign_Country_Active__INV_condition = ['Airline ID', 'Name', 'Alias', 'IATA', 'ICAO', 'Callsign', 'Country', 'Active']
 	

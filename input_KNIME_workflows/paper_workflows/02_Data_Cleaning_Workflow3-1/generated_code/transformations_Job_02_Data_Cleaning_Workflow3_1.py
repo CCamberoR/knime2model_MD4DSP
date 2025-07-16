@@ -19,24 +19,15 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=mapping_Country__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Country')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Country', origin_function="String Manipulation")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_types_as_string(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_suspect_precision(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country')
-	
-	data_smells.check_separating_consistency(data_dictionary=mapping_Country__input_dataDictionary_df, decimal_sep='.',  field='Country')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', origin_function="String Manipulation")
+	data_smells.check_types_as_string(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', expected_type=DataType.STRING, origin_function="String Manipulation")
+	data_smells.check_special_character_spacing(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', origin_function="String Manipulation")
+	data_smells.check_suspect_precision(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', origin_function="String Manipulation")
+	data_smells.check_date_as_datetime(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', origin_function="String Manipulation")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=mapping_Country__input_dataDictionary_df, field='Country', origin_function="String Manipulation")
+	data_smells.check_separating_consistency(data_dictionary=mapping_Country__input_dataDictionary_df, decimal_sep='.',  field='Country', origin_function="String Manipulation")
 	
 
 	input_values_list=['United States']

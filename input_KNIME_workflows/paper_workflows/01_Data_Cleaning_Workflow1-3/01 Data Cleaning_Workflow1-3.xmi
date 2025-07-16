@@ -518,7 +518,7 @@
     <storage
         xsi:type="Environment:LocalFolder"
         storageName="d1"
-        folderPath="/home/carlos/Escritorio/datasets">
+        folderPath="../knime_dataDictionaries">
       <file
           dataDictionary="//@dataprocessing.0/@inputPort.0"/>
       <file

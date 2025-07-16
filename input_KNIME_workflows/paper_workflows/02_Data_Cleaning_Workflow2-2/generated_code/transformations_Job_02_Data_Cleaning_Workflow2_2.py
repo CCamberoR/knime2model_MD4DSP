@@ -19,24 +19,15 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=columnFilter_Name__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Name')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='Name', origin_function="Column Filter")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name')
-	
-	data_smells.check_types_as_string(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name')
-	
-	data_smells.check_suspect_precision(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name')
-	
-	data_smells.check_separating_consistency(data_dictionary=columnFilter_Name__input_dataDictionary_df, decimal_sep='.',  field='Name')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_types_as_string(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', expected_type=DataType.STRING, origin_function="Column Filter")
+	data_smells.check_special_character_spacing(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_suspect_precision(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_date_as_datetime(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=columnFilter_Name__input_dataDictionary_df, field='Name', origin_function="Column Filter")
+	data_smells.check_separating_consistency(data_dictionary=columnFilter_Name__input_dataDictionary_df, decimal_sep='.',  field='Name', origin_function="Column Filter")
 	
 
 	columnFilter_Name__input_dataDictionary_transformed=columnFilter_Name__input_dataDictionary_df.copy()

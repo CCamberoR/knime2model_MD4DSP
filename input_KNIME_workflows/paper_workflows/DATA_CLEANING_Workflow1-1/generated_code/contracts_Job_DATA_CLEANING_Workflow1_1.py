@@ -24,25 +24,16 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=binner_hours_per_week__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='hours-per-week')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='hours-per-week', origin_function="Rule Engine")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week')
-	
-	data_smells.check_types_as_string(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', expected_type=DataType.INTEGER)
-	
-	data_smells.check_special_character_spacing(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week')
-	
-	data_smells.check_suspect_precision(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week')
-	
-	data_smells.check_suspect_distribution(data_dictionary=binner_hours_per_week__input_dataDictionary_df, min_value=0.0, max_value=8.0, field='hours-per-week')
-	
-	data_smells.check_date_as_datetime(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week')
-	
-	data_smells.check_separating_consistency(data_dictionary=binner_hours_per_week__input_dataDictionary_df, decimal_sep='.',  field='hours-per-week')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', origin_function="Rule Engine")
+	data_smells.check_types_as_string(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', expected_type=DataType.INTEGER, origin_function="Rule Engine")
+	data_smells.check_special_character_spacing(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', origin_function="Rule Engine")
+	data_smells.check_suspect_precision(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', origin_function="Rule Engine")
+	data_smells.check_date_as_datetime(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', origin_function="Rule Engine")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=binner_hours_per_week__input_dataDictionary_df, field='hours-per-week', origin_function="Rule Engine")
+	data_smells.check_suspect_distribution(data_dictionary=binner_hours_per_week__input_dataDictionary_df, min_value=0.0, max_value=8.0, field='hours-per-week', origin_function="Rule Engine")
+	data_smells.check_separating_consistency(data_dictionary=binner_hours_per_week__input_dataDictionary_df, decimal_sep='.',  field='hours-per-week', origin_function="Rule Engine")
 	
 	if contract_pre_post.check_interval_range_float(left_margin=0.0, right_margin=1000.0, data_dictionary=binner_hours_per_week__input_dataDictionary_df,
 	                                	closure_type=Closure(3), belong_op=Belong(0), field='hours-per-week', origin_function="Rule Engine"):
@@ -97,24 +88,15 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=mapping_native_country__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='native-country')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='native-country', origin_function="String Manipulation")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country')
-	
-	data_smells.check_types_as_string(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', expected_type=DataType.STRING)
-	
-	data_smells.check_special_character_spacing(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country')
-	
-	data_smells.check_suspect_precision(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country')
-	
-	
-	data_smells.check_date_as_datetime(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country')
-	
-	data_smells.check_separating_consistency(data_dictionary=mapping_native_country__input_dataDictionary_df, decimal_sep='.',  field='native-country')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', origin_function="String Manipulation")
+	data_smells.check_types_as_string(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', expected_type=DataType.STRING, origin_function="String Manipulation")
+	data_smells.check_special_character_spacing(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', origin_function="String Manipulation")
+	data_smells.check_suspect_precision(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', origin_function="String Manipulation")
+	data_smells.check_date_as_datetime(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', origin_function="String Manipulation")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=mapping_native_country__input_dataDictionary_df, field='native-country', origin_function="String Manipulation")
+	data_smells.check_separating_consistency(data_dictionary=mapping_native_country__input_dataDictionary_df, decimal_sep='.',  field='native-country', origin_function="String Manipulation")
 	
 	if contract_pre_post.check_fix_value_range(value='-', is_substring=True, data_dictionary=mapping_native_country__input_dataDictionary_df, belong_op=Belong(0), field='native-country',
 									quant_abs=None, quant_rel=None, quant_op=None, origin_function="String Manipulation"):
@@ -167,25 +149,16 @@ def generateWorkflow():
 	list_invalid=[]
 	
 	data_smells.check_missing_invalid_value_consistency(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, 
-														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='age')
+														missing_invalid_list=[], common_missing_invalid_list=common_missing_list, field='age', origin_function="Math Formula")
 	
-	data_smells.check_integer_as_floating_point(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age')
-	
-	data_smells.check_types_as_string(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', expected_type=DataType.DOUBLE)
-	
-	data_smells.check_special_character_spacing(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age')
-	
-	data_smells.check_suspect_precision(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age')
-	
-	data_smells.check_suspect_distribution(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, min_value=440.0, max_value=1600.0, field='age')
-	
-	data_smells.check_date_as_datetime(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age')
-	
-	data_smells.check_separating_consistency(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, decimal_sep='.',  field='age')
-	
-	
-	data_smells.check_ambiguous_datetime_format(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age')
-	
+	data_smells.check_integer_as_floating_point(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', origin_function="Math Formula")
+	data_smells.check_types_as_string(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', expected_type=DataType.DOUBLE, origin_function="Math Formula")
+	data_smells.check_special_character_spacing(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', origin_function="Math Formula")
+	data_smells.check_suspect_precision(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', origin_function="Math Formula")
+	data_smells.check_date_as_datetime(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', origin_function="Math Formula")
+	data_smells.check_ambiguous_datetime_format(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', origin_function="Math Formula")
+	data_smells.check_suspect_distribution(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, min_value=440.0, max_value=1600.0, field='age', origin_function="Math Formula")
+	data_smells.check_separating_consistency(data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, decimal_sep='.',  field='age', origin_function="Math Formula")
 	
 	missing_values_mathOperation_PRE_valueRange=[]
 	if contract_pre_post.check_missing_range(belong_op=Belong(0), data_dictionary=mathOperation_Age_of_birth__input_dataDictionary_df, field='age', 
@@ -206,7 +179,7 @@ def generateWorkflow():
 	if contract_invariants.check_inv_math_operation(data_dictionary_in=mathOperation_Age_of_birth__input_dataDictionary_df,
 											data_dictionary_out=mathOperation_Age_of_birth__output_dataDictionary_df,
 											math_op=MathOperator(1),
-											firstOperand=1994, isFieldFirst=False,secondOperand='age', isFieldSecond=True, 
+											first_operand=1994, is_field_first=False,second_operand='age', is_field_second=True, 
 											belong_op_out=Belong(0), field_in='age', field_out='Age-of-birth', origin_function="Math Formula"):
 		print('INVARIANT Math Formula(Age-of-birth) substract(1994, age, ) VALIDATED')
 	else:
